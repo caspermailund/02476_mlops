@@ -4,7 +4,6 @@ from dataloader import get_test_loader
 from sklearn.metrics import classification_report, accuracy_score
 from tqdm import tqdm 
 
-# Brug CPU
 device = torch.device('cpu')
 
 # Load the trained model
@@ -45,7 +44,7 @@ class_report = classification_report(all_labels, all_predictions)
 print("\nClassification Report:\n")
 print(class_report)
 
-# Save results (optional)
+# Save results
 with open('../../models/evaluation_report.txt', 'w') as f:
     f.write(f'Accuracy: {accuracy * 100:.2f}%\n\n')
     f.write("Classification Report:\n")
