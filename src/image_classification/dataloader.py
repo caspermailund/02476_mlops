@@ -5,7 +5,7 @@ from albumentations.pytorch import ToTensorV2
 from PIL import Image
 import albumentations as A
 
-# Definér batch-størrelse ét sted
+# Define batch-size
 BATCH_SIZE = 8
 
 # Define Albumentations transformations for training
