@@ -19,7 +19,7 @@ test_loader = get_test_loader(image_folder='../../data/raw/pc_parts_test')
 all_labels = []
 all_predictions = []
 
-# Evaluation loop med fremdriftsbjælke
+# Evaluation loop
 with torch.no_grad():
     with tqdm(test_loader, desc="Evaluating", unit="batch") as pbar:
         for images, labels in pbar:
