@@ -1,0 +1,10 @@
+batch_size: 8
+epochs: 1
+learning_rate: 0.001
+data_folder: "../../data/raw/pc_parts_train"
+model_save_path: "../../models/pc_parts_cnn.pth"
+test_data_folder: "../../data/raw/pc_parts_test"
+evaluation_save_path: "../../models/evaluation_report.txt"  
+hydra:
+  job:
+    chdir: false
