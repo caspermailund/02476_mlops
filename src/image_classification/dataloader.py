@@ -5,9 +5,6 @@ from albumentations.pytorch import ToTensorV2
 from PIL import Image
 import albumentations as A
 
-# Define batch-size
-BATCH_SIZE = 8
-
 # Define Albumentations transformations for training
 transform_train = A.Compose([
     A.HorizontalFlip(p=0.5),
@@ -43,12 +40,10 @@ class CustomDataset(torch.utils.data.Dataset):
         image = image.float()  # Convert to float
         return image, label
 
-def get_train_loader(image_folder, batch_size=BATCH_SIZE):
-    train_data = CustomDataset(image_folder=image_folder, transform=transform_train)
-    train_loader = torch.utils.data.DataLoader(train_data, batch_size=batch_size, shuffle=True)
-    return train_loader
+def get_train_loader(image_folder, transform=transform_train):
+    train_data = CustomDataset(image_folder=image_folder, transform=transform)
+    return train_data
 
-def get_test_loader(image_folder, batch_size=BATCH_SIZE):
-    test_data = CustomDataset(image_folder=image_folder, transform=transform_test)
-    test_loader = torch.utils.data.DataLoader(test_data, batch_size=batch_size, shuffle=False)
-    return test_loader
+def get_test_loader(image_folder, transform=transform_test):
+    test_data = CustomDataset(image_folder=image_folder, transform=transform)
+    return test_data
