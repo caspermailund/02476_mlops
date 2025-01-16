@@ -1,5 +1,5 @@
 import torch
-from image_classfication.model import SimpleCNN
+from image_classification.model import SimpleCNN
 
 def test_model():
     model = SimpleCNN()

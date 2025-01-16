@@ -17,7 +17,7 @@ def test_training():
     optimizer.zero_grad()
 
     # Forward pass
-    outputs = model(torch.random([1, 3, 256, 256]))
+    outputs = model(torch.randn([1, 3, 256, 256]))
     labels = torch.zeros([1, 14])
     labels[0, 0] = 1
     loss = criterion(outputs, labels)
