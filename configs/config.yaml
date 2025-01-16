@@ -1,10 +1,23 @@
 batch_size: 8
-epochs: 1
+epochs: 2
 learning_rate: 0.001
+
 data_folder: "../../data/raw/pc_parts_train"
 model_save_path: "../../models/pc_parts_cnn.pth"
 test_data_folder: "../../data/raw/pc_parts_test"
 evaluation_save_path: "../../models/evaluation_report.txt"  
+logging_train_path: "../../logs/training_log.txt"
+
+defaults:
+  - _self_
+  - override hydra/hydra_logging: disabled # Disable Hydra's internal logging
+  - override hydra/job_logging: disabled # Disable job-specific logging handled by Hydra
+
 hydra:
   job:
-    chdir: false
+    chdir: false # Prevent Hydra from changing the current working directory during execution.
+  output_subdir: null # Set the output subdirectory to null (no subdirectory).
+  run:
+    # Set the directory for the run to the current directory (.)
+    dir: .
+
