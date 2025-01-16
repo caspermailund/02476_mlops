@@ -1,12 +1,14 @@
 import torch
 import torch.optim as optim
-from model import SimpleCNN
-from dataloader import get_train_loader
 from tqdm import tqdm
 import hydra
 from omegaconf import DictConfig
 import os
 from loguru import logger
+
+# Correct import from the src.image_classification module
+from src.image_classification.model import SimpleCNN
+from src.image_classification.dataloader import get_train_loader  # Make sure this is correct
 
 # Reading the hyperparameters and paths from the configuration file
 @hydra.main(config_path="../../configs", config_name="config.yaml")

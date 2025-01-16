@@ -11,7 +11,10 @@ COPY requirements_dev.txt requirements_dev.txt
 COPY README.md README.md
 COPY pyproject.toml pyproject.toml
 
+RUN ls -R /src  # List files in the /src directory to confirm structure
+
 RUN pip install -r requirements.txt --no-cache-dir --verbose
 RUN pip install . --no-deps --no-cache-dir --verbose
 
-ENTRYPOINT ["uvicorn", "src/image_classification/api:app", "--host", "0.0.0.0", "--port", "8000"]
+# Modify entrypoint if needed
+ENTRYPOINT ["uvicorn", "image_classification.api:app", "--host", "0.0.0.0", "--port", "8000"]
