@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: ["ubuntu-latest", "windows-latest", "macos-latest"]
+        operating-systecm: ["ubuntu-latest", "windows-latest", "macos-latest"]
         python-version: ["3.12", "3.11"]
 
     steps:
@@ -31,10 +31,13 @@ jobs:
         run: |
           python -m pip install -U pip setuptools wheel
           pip install -r requirements.txt
+          pip install -r requirements_dev.txt
+          pip install -e.
           pip list
 
 
       - name: Run tests & coverage
         run: |
-          coverage run -m pytest tests/
+          coverage run -m pytest tests/test_model.py
+          coverage run -m pytest tests/test_training.py
           coverage report -m
