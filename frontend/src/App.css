@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+}
+
+.App header p {
+  font-size: 1.1rem;
+}
+
+.main {
+  padding: 20px;
+}
+
+.upload-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.upload-form input[type="file"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.upload-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.upload-form button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.spinner {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.result h2 {
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
