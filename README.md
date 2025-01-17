@@ -1,8 +1,8 @@
-# Image classification of computer hardware components
+# Image Classification of Computer Hardware Components
 A project by Group 2 in 02476 Machine Learning Operations at DTU.
 
 ## Project overview
-This project focuses on classifying images of various computer hardware components using a simple simple convolutional neural network (CNN). To optimize the dataset for better results, the third-party package Albumentations is used for image augmentation. The dataset used for this project is the PC Parts Images Dataset from Kaggle, which contains images of different computer components (e.g., motherboards, RAM, graphics cards, etc.).
+This project focuses on classifying images of various computer hardware components using a Convolutional Neural Network (CNN). To optimize the dataset for better results, the third-party package Albumentations is used for image augmentation. The dataset used for this project is the PC Parts Images Dataset from Kaggle, which contains images of different computer components (e.g., motherboards, RAM, graphics cards, etc.).
 
 ## Data description
 The dataset initially used for this project is the [PC Parts Images Dataset](https://www.kaggle.com/datasets/asaniczka/pc-parts-images-dataset-classification?select=pc_parts) from Kaggle, consisting of 3,279 images categorized into 14 distinct classes:
