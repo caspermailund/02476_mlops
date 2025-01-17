@@ -1,7 +1,7 @@
 """
 This script trains a convolutional neural network (CNN).
 
-The training script uses Hydra to load hyperparameters and paths from a configuration file. 
+The training script uses Hydra to load hyperparameters and paths from a configuration file.
 Loguru is used for logging the model initialization, hyperparameters, and the average loss of each epoch.
 Weights and Biases (W&B) also logs hyperparameters and the training progress. Furthermore, W&B saves the model as an artifact.
 """
@@ -17,10 +17,10 @@ import os
 from loguru import logger
 import wandb
 
+
 # Reading the hyperparameters and paths from the configuration file
 @hydra.main(config_path="../../configs", config_name="config.yaml")
 def main(cfg: DictConfig):
-
     # Initialize W&B
     wandb.init(
         project=cfg.wandb_project_name,
@@ -58,7 +58,7 @@ def main(cfg: DictConfig):
     # Training loop
     for epoch in range(cfg.epochs):
         avg_loss = 0.0  # Initialize running average loss for the epoch
-        with tqdm(train_loader, desc=f'Epoch {epoch+1}/{cfg.epochs}', unit='batch') as pbar:
+        with tqdm(train_loader, desc=f"Epoch {epoch+1}/{cfg.epochs}", unit="batch") as pbar:
             for iteration, (images, labels) in enumerate(pbar):
                 optimizer.zero_grad()
 
@@ -88,7 +88,7 @@ def main(cfg: DictConfig):
     try:
         # Get the model save path from the config
         model_path = os.path.abspath(cfg.model_save_path)
-        
+
         # Save the model state to a temporary file
         torch.save(model.state_dict(), model_path)
 
@@ -106,6 +106,7 @@ def main(cfg: DictConfig):
 
     # Finish W&B run
     wandb.finish()
+
 
 # Run the main function
 if __name__ == "__main__":
