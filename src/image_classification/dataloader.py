@@ -1,3 +1,8 @@
+"""
+This script creates a custom dataset with Albumentations for image augmentations and tensor conversion. 
+It is used to load both the training data and the testing data.
+"""
+
 import torch
 import numpy as np
 from torchvision import datasets
