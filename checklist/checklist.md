@@ -27,7 +27,7 @@
 - [ ] Get some continuous integration running on the GitHub repository (M17)
 - [ ] Add caching and multi-OS/Python/PyTorch testing to your continuous integration (M17)
 - [ ] Add a linting step to your continuous integration (M17)
-- [ ] Add pre-commit hooks to your version control setup (M18)
+- [x] Add pre-commit hooks to your version control setup (M18)
 - [ ] Add a continuous workflow that triggers when data changes (M19)
 - [ ] Add a continuous workflow that triggers when changes to the model registry are made (M19)
 - [ ] Create a data storage in GCP Bucket for your data and link this with your data version control setup (M21)
