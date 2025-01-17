@@ -4,7 +4,6 @@ By default, the dataset is split into 80% training data and 20% testing data, wi
 
 The script allows you to adjust the train/test split via the command-line interface (CLI). 
 Use the --test-size option to modify the ratio (e.g., "python data.py --test-size 0.3" for a 70/30 split).
-If not provided, the default split is 80/20.
 """
 
 import subprocess
