@@ -7,10 +7,22 @@ import hydra
 from omegaconf import DictConfig
 import os
 from loguru import logger
+import wandb
 
 # Reading the hyperparameters and paths from the configuration file
 @hydra.main(config_path="../../configs", config_name="config.yaml")
 def main(cfg: DictConfig):
+
+    # Initialize W&B
+    wandb.init(
+        project=cfg.wandb_project_name,
+        config={
+            "learning_rate": cfg.learning_rate,
+            "batch_size": cfg.batch_size,
+            "epochs": cfg.epochs,
+            "model": "SimpleCNN",
+        },
+    )
 
     # Configure logging
     log_file_path = os.path.abspath(cfg.logging_train_path)
@@ -55,18 +67,37 @@ def main(cfg: DictConfig):
                 loss.backward()
                 optimizer.step()
 
+                # Log loss to W&B
+                wandb.log({"epoch": epoch + 1, "loss": loss.detach().item()})
+
                 # Update the progress bar with the average loss so far
                 pbar.set_postfix(loss=avg_loss)
 
         # After each epoch, log the average loss for that epoch
         logger.info(f"Epoch {epoch+1}/{cfg.epochs}, Average Loss: {avg_loss}")
 
-    # Save the trained model
+    # Save the trained model as an artifact
     try:
-        torch.save(model.state_dict(), os.path.abspath(cfg.model_save_path))
-        logger.info("Model saved successfully.")
+        # Get the model save path from the config
+        model_path = os.path.abspath(cfg.model_save_path)
+        
+        # Save the model state to a temporary file
+        torch.save(model.state_dict(), model_path)
+
+        # Log model as a W&B artifact
+        artifact = wandb.Artifact("simple_cnn_model", type="model")
+        artifact.add_file(model_path)
+        wandb.log_artifact(artifact)
+
+        # Remove the temporary file after logging to W&B
+        os.remove(model_path)
+
+        logger.info("Model saved as W&B artifact successfully.")
     except Exception as e:
-        logger.error(f"Error saving model: {e}")
+        logger.error(f"Error saving model as W&B artifact: {e}")
+
+    # Finish W&B run
+    wandb.finish()
 
 # Run the main function
 if __name__ == "__main__":
