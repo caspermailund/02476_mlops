@@ -1,4 +1,4 @@
-2025-01-16 15:06:10 | INFO | Model initialized: SimpleCNN(
+2025-01-17 09:22:19 | INFO | Model initialized: SimpleCNN(
   (conv1): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
   (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
   (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
@@ -10,8 +10,8 @@
   (fc2): Linear(in_features=512, out_features=14, bias=True)
   (dropout): Dropout(p=0.5, inplace=False)
 )
-2025-01-16 15:06:10 | INFO | Loss function: CrossEntropyLoss()
-2025-01-16 15:06:10 | INFO | Optimizer: Adam (
+2025-01-17 09:22:19 | INFO | Loss function: CrossEntropyLoss()
+2025-01-17 09:22:19 | INFO | Optimizer: Adam (
 Parameter Group 0
     amsgrad: False
     betas: (0.9, 0.999)
@@ -24,6 +24,5 @@ Parameter Group 0
     maximize: False
     weight_decay: 0
 ), Learning Rate: 0.001
-2025-01-16 15:12:27 | INFO | Epoch 1/2, Average Loss: 7.9033680618356215
-2025-01-16 15:18:32 | INFO | Epoch 2/2, Average Loss: 2.6302652570450356
-2025-01-16 15:18:33 | INFO | Model saved successfully.
+2025-01-17 09:28:47 | INFO | Epoch 1/1, Average Loss: 8.315298420938149
+2025-01-17 09:28:50 | INFO | Model saved as W&B artifact successfully.
