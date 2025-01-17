@@ -31,14 +31,14 @@
 - [ ] Add a continuous workflow that triggers when data changes (M19)
 - [ ] Add a continuous workflow that triggers when changes to the model registry are made (M19)
 - [ ] Create a data storage in GCP Bucket for your data and link this with your data version control setup (M21)
-- [ ] Create a trigger workflow for automatically building your Docker images (M21)
+- [x] Create a trigger workflow for automatically building your Docker images (M21)
 - [ ] Get your model training in GCP using either the Engine or Vertex AI (M21)
 - [ ] Create a FastAPI application that can do inference using your model (M22)
 - [ ] Deploy your model in GCP using either Functions or Run as the backend (M23)
 - [ ] Write API tests for your application and set up continuous integration for these (M24)
 - [ ] Load test your application (M24)
 - [ ] Create a more specialized ML-deployment API using either ONNX or BentoML, or both (M25)
-- [ ] Create a frontend for your API (M26)
+- [x] Create a frontend for your API (M26)
 
 ## Week 3
 - [ ] Check how robust your model is towards data drifting (M27)
