@@ -1,12 +1,14 @@
 batch_size: 8
-epochs: 2
+epochs: 1
 learning_rate: 0.001
 
 data_folder: "../../data/raw/pc_parts_train"
 model_save_path: "../../models/pc_parts_cnn.pth"
 test_data_folder: "../../data/raw/pc_parts_test"
-evaluation_save_path: "../../models/evaluation_report.txt"  
+evaluation_save_path: "../../models/evaluation_report.txt"
 logging_train_path: "../../logs/training_log.txt"
+
+wandb_project_name: "image_classification"
 
 defaults:
   - _self_
@@ -20,4 +22,3 @@ hydra:
   run:
     # Set the directory for the run to the current directory (.)
     dir: .
-
