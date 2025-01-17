@@ -2,9 +2,9 @@ import torch
 import torch.optim as optim
 from image_classification.model import SimpleCNN
 
+
 # Reading the hyperparameters and paths from the configuration file
 def test_training():
-
     # Initialize the model
     model = SimpleCNN()
 
