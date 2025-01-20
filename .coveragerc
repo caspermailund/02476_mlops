@@ -1,0 +1,4 @@
+[run]
+omit =
+    */cv2/config-3.py
+    */cv2/__pycache__/config-3.cpython-312.pyc
