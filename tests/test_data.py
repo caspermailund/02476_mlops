@@ -2,7 +2,8 @@ import numpy as np
 from PIL import Image
 import torch
 import io
-from image_classification.dataloader import CustomDataset, transform_test
+from image_classification.dataloader import transform_test
+
 
 class InMemoryDataset(torch.utils.data.Dataset):
     def __init__(self, num_classes=14, image_size=(256, 256), transform=None):
