@@ -1,4 +1,4 @@
 [run]
-omit = 
+omit =
     config.py
     config-3.py
