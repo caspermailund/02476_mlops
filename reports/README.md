@@ -191,12 +191,12 @@ pip install –r requirements.txt
 
 We further added the following to the structure to accommodate specific needs for our project:
 -	Sripts to ```src```: such as data processing and model training.
--	Dependencies needed for producing the results in ```requirements.txt```. 
+-	Dependencies needed for producing the results in ```requirements.txt```.
 -	Added ```dvc``` tools.
--	Created notebook to visualize the data. 
+-	Created notebook to visualize the data.
 -	dvc.yaml to ensure reproducibility of the results.
--	CI/CD configuration files to ```.github/workflows```. 
--	Docker workflow to automatically building and pushing the docker images. 
+-	CI/CD configuration files to ```.github/workflows```.
+-	Docker workflow to automatically building and pushing the docker images.
 
 ### Question 6
 
