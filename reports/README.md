@@ -166,7 +166,7 @@ Albumentations
 We managed dependencies for this project using a requirement.txt file, which keeps a list of all the necessary python packages and their respective versions required to reproduce the results. The use of this approach ensures that everyone contributing to the project can easily set up an identical environment, required for remote work. Further, it provides future developers with a guide on how to reproduce the results and creates an easy access to the dependencies.
 In order to create the environment used in this project it is assumed that developers have python 3.12.7, git and conda installed locally on their machines.
 
-To create the environment follow these intructions:
+To create the environment follow these instructions:
 ```bash
 git clone https://github.com/caspermailund/02476_mlops/tree/main
 cd 02476_mlops
