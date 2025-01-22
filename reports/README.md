@@ -243,7 +243,7 @@ Albumentations
 >
 > Answer:
 
---- question 9 fill here ---
+Our workflow included the use of branches and pull requests to create separate workspaces for all developers. The use of branches ensured that implementing new features and fixing bugs was isolated, thereby preventing interference with the main coding base which reduces the risk of large merge conflicts that could be hard to solve. Using pull request in the workflow allowed us to merge changes form individual branches into the main branch, ensuring that the main branch was constantly up to date. This overall improved version control by allowing organized collaboration between developers while still letting multiple developers work on the same project simultaneously.
 
 ### Question 10
 
