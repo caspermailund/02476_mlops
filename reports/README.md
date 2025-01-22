@@ -257,7 +257,21 @@ In total, seven tests were implemented in three different test files; ```test_da
 >
 > Answer:
 
---- question 8 fill here ---
+The coverage report is seen in table bellow:
+
+| **File**                                   | **Statements** | **Missed** | **Coverage (%)** |
+|--------------------------------------------|----------------|------------|------------------|
+| `src/image_classification/__init__.py`     | 0              | 0          | 100%             |
+| `src/image_classification/dataloader.py`   | 27             | 13         | 52%              |
+| `src/image_classification/model.py`        | 24             | 0          | 100%             |
+| `tests/__init__.py`                        | 4              | 0          | 100%             |
+| `tests/test_api.py`                        | 0              | 0          | 100%             |
+| `tests/test_data.py`                       | 34             | 1          | 97%              |
+| `tests/test_model.py`                      | 7              | 0          | 100%             |
+| `tests/test_training.py`                   | 13             | 0          | 100%             |
+| **TOTAL**                                  | **109**        | **14**     | **87%**          |
+
+
 
 ### Question 9
 
