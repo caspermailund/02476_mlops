@@ -272,6 +272,8 @@ The coverage report is seen in table bellow:
 | `tests/test_training.py`                   | 13             | 0          | 100%             |
 | **TOTAL**                                  | **109**        | **14**     | **87%**          |
 
+It is seen that the total coverage in our testing is 87%.
+
 The percentages are and indicator of how much of the coded lines is actually executed during the tests. However even with high percentages there might still be bugs present in parts of the code that are not completely tested or scenarios that haven’t been tested. The percentages are however a good indicator of how much code is covered in the tests and higher percentages are therefore preferred since it means more of the code has been tested which reduces the likelihood of bugs exciting in the code.
 
 ### Question 9
