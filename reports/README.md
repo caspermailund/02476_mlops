@@ -129,7 +129,7 @@ will check the repositories and the code to verify your answers.
 >
 > Answer:
 
-s170422, s194277, s174152, s233595, s244492
+s170422, s174152, s194277, s233595, s244492
 
 ### Question 3
 > **A requirement to the project is that you include a third-party package not covered in the course. What framework**
@@ -577,4 +577,15 @@ s170422, s194277, s174152, s233595, s244492
 > *We have used ChatGPT to help debug our code. Additionally, we used GitHub Copilot to help write some of our code.*
 > Answer:
 
---- question 31 fill here ---
+Student s170422 ...
+
+Student s174152 ...
+
+Student s194277 ...
+
+Student s233595 ...
+
+Student s244492 ...
+
+All members contributed to ...
+Addititonally ChatGPT was used to help understanding errors and commands never used before.
