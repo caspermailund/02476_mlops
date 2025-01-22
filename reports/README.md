@@ -232,7 +232,17 @@ We further added the following to the structure to accommodate specific needs fo
 >
 > Answer:
 
---- question 7 fill here ---
+In total, seven tests were implemented in three different test files; ```test_data.py```, ```test_modelpy``` and ```test_training.py```. 
+```test_data.py``` tests that 
+-	the data contains the right amount of samples, in this case 14
+-	the shape of the image ```(3, 256, 256)``` 
+-	the labels are within the range ```[0, 13]```. 
+```test_model.py``` tests that 
+-	the output images produced is of shape ```[1, 14]```. 
+```test_training.py``` tests that 
+-	output images are produced
+-	the loss function produces non zero values
+-	the optimizer is initialized correctly 
 
 ### Question 8
 
