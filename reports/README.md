@@ -163,7 +163,7 @@ Albumentations
 >
 > Answer:
 
-We managed dependencies for this project using a requirement.txt file, which keeps a list of all the necessary python packages and their respective versions required to reproduce the results. The use of this approach ensures that everyone contributing to the project can easily set up an identical environment, required for remote work. Further, it provides future developers with a guide on how to reproduce the results and creates an easy access to the dependencies.
+We managed dependencies for this project using a ```requirement.txt``` file, which keeps a list of all the necessary python packages and their respective versions required to reproduce the results. The use of this approach ensures that everyone contributing to the project can easily set up an identical environment, required for remote work. Further, it provides future developers with a guide on how to reproduce the results and creates an easy access to the dependencies.
 In order to create the environment used in this project it is assumed that developers have python 3.12.7, git and conda installed locally on their machines.
 
 To create the environment follow these instructions:
@@ -189,7 +189,14 @@ pip install –r requirements.txt
 >
 > Answer:
 
---- question 5 fill here ---
+We further added the following to the structure to accommodate specific needs for our project:
+-	Sripts to ```src```: such as data processing and model training.
+-	Dependencies needed for producing the results in ```requirements.txt```. 
+-	Added ```dvc``` tools.
+-	Created notebook to visualize the data. 
+-	dvc.yaml to ensure reproducibility of the results.
+-	CI/CD configuration files to ```.github/workflows```. 
+-	Docker workflow to automatically building and pushing the docker images. 
 
 ### Question 6
 
