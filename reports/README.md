@@ -189,6 +189,8 @@ pip install –r requirements.txt
 >
 > Answer:
 
+The project was initialized using the cookiecutter template provided in the course and we tried to keep the structure throughout the development. By doing so we create a consistent structure that makes it easier for collaboration. 
+
 We further added the following to the structure to accommodate specific needs for our project:
 -	Sripts to ```src```: such as data processing and model training.
 -	Dependencies needed for producing the results in ```requirements.txt```.
