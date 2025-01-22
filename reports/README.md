@@ -173,6 +173,7 @@ cd 02476_mlops
 conda create -n myenv python=3.12.7
 conda activate myenv
 pip install –r requirements.txt
+pip install -e .
 ```
 
 ### Question 5
