@@ -194,7 +194,7 @@ We further added the following to the structure to accommodate specific needs fo
 -	Dependencies needed for producing the results in ```requirements.txt```.
 -	Added ```dvc``` tools.
 -	Created notebook to visualize the data.
--	dvc.yaml to ensure reproducibility of the results.
+-	```dvc.yaml``` to ensure reproducibility of the results.
 -	CI/CD configuration files to ```.github/workflows```.
 -	Docker workflow to automatically building and pushing the docker images.
 
