@@ -58,16 +58,12 @@ def main(cfg: DictConfig):
 
     # Load the training data using the DataLoader with the batch size from the config
     train_loader = get_train_loader(image_folder=image_folder)
-    train_loader = torch.utils.data.DataLoader(
-        train_loader, batch_size=cfg.batch_size, shuffle=True
-    )
+    train_loader = torch.utils.data.DataLoader(train_loader, batch_size=cfg.batch_size, shuffle=True)
 
     # Training loop
     for epoch in range(cfg.epochs):
         avg_loss = 0.0  # Initialize running average loss for the epoch
-        with tqdm(
-            train_loader, desc=f"Epoch {epoch+1}/{cfg.epochs}", unit="batch"
-        ) as pbar:
+        with tqdm(train_loader, desc=f"Epoch {epoch+1}/{cfg.epochs}", unit="batch") as pbar:
             for iteration, (images, labels) in enumerate(pbar):
                 optimizer.zero_grad()
 
