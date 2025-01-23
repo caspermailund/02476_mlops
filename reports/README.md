@@ -480,7 +480,9 @@ The bucket contains:
 >
 > Answer:
 
---- question 20 fill here ---
+![artifact_1](figures/gcp_artifact_registry_1.png)
+
+![artifact_2](figures/gcp_artifact_registry_2.png)
 
 ### Question 21
 
