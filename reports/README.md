@@ -390,7 +390,11 @@ The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includ
 >
 > Answer:
 
---- question 14 fill here ---
+Charts:
+![Charts](figures/w&b_1.png)
+
+System:
+![System](figures/w&b_2.png)
 
 ### Question 15
 
