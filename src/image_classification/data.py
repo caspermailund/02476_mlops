@@ -26,9 +26,7 @@ logging.basicConfig(
 )
 
 # Define paths
-download_path = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), "../../data/raw"
-)
+download_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/raw")
 train_dir = os.path.join(download_path, "pc_parts_train")
 test_dir = os.path.join(download_path, "pc_parts_test")
 pc_parts_dir = os.path.join(download_path, "pc_parts")
@@ -76,9 +74,7 @@ def split_data(test_size: float = 0.2, random_state: int = 42):
             image_files = [f for f in os.listdir(category_path) if f.endswith(".jpg")]
 
             # Split the images into train and test based on test_size
-            train_files, test_files = train_test_split(
-                image_files, test_size=test_size, random_state=random_state
-            )
+            train_files, test_files = train_test_split(image_files, test_size=test_size, random_state=random_state)
 
             # Create category subdirectories in train and test directories
             train_category_dir = os.path.join(train_dir, category)

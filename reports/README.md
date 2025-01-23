@@ -390,11 +390,13 @@ The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includ
 >
 > Answer:
 
-Charts:
-![Charts](figures/w&b_1.png)
+We log loss, epoch, and model as an artifact to track the training process. The loss helps us monitor performance and adjust training if needed, while the epoch shows the model's progress across iterations. Saving the model as an artifact allows us to version and retrieve it later for comparison or deployment. However, since the model has only completed one epoch, the data is not highly valuable at this point—it’s more of a demonstration of the process. These logs are key for tracking performance, optimizing hyperparameters, ensuring reproducibility, and enabling collaboration, making the training process transparent and easier to manage.
 
-System:
-![System](figures/w&b_2.png)
+Loss and epochs:
+![Loss and epochs](figures/w&b_1.png)
+
+Model artifact:
+![Model artifact](figures/w&b_2.png)
 
 ### Question 15
 
@@ -487,7 +489,8 @@ The bucket contains:
 >
 > Answer:
 
---- question 21 fill here ---
+GCP cloud build history:
+![GCP cloud build history](figures/build_history.png)
 
 ### Question 22
 
