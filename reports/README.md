@@ -235,7 +235,7 @@ Key modifications include, but are not limited to:
 >
 > Answer:
 
-In total, seven tests were implemented in three different test files; ```test_data.py```, ```test_modelpy``` and ```test_training.py```.
+In total, seven tests were implemented in three different test files; ```test_dataloader.py```, ```test_model.py``` and ```test_training.py```.
 ```test_data.py``` tests that
 -	the data contains the right amount of samples, in this case 14
 -	the shape of the image ```(3, 256, 256)```
@@ -480,6 +480,7 @@ The bucket contains:
 >
 > Answer:
 
+GCP artifact registry:
 ![artifact_1](figures/gcp_artifact_registry_1.png)
 
 ![artifact_2](figures/gcp_artifact_registry_2.png)
