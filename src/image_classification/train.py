@@ -8,14 +8,13 @@ Furthermore, W&B saves the model as an artifact.
 """
 
 import os
-
 import hydra
 import torch
 import torch.optim as optim
 import wandb
-from dataloader import get_train_loader
+from image_classification.dataloader import get_train_loader
 from loguru import logger
-from model import SimpleCNN
+from image_classification.model import SimpleCNN
 from omegaconf import DictConfig
 from tqdm import tqdm
 
