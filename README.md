@@ -22,7 +22,7 @@ The dataset initially used for this project is the [PC Parts Images Dataset](htt
 - speakers
 - webcam
 
-Each class contains between 142 and 298 images. All images has a resolution of 256x256 pixels and formatted in the JPG file type. 
+Each class contains between 142 and 298 images. All images has a resolution of 256x256 pixels and formatted in the JPG file type.
 
 ## Albumentations (third-party package)
 The third-party package used in this project is [Albumentations](https://github.com/albumentations-team/albumentations), which is an image augmentation library written in Python. Albumentation has +70 augmentations that can be applied to the training data, involving transformations such as JPEG compression, blurring, grayscaling, channel shuffling, RGB switching, and more. The documentation can be found [here](https://albumentations.ai/docs/).
