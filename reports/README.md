@@ -324,7 +324,21 @@ and the ability to revert to previous data versions, making our workflow more ef
 >
 > Answer:
 
---- question 11 fill here ---
+Our continuous integration (CI) setup, powered by GitHub Actions, ensures the reliability and maintainability of our codebase. Key features include:
+
+**Unit Testing**
+Automated unit tests validate the functionality of key components like data loading, preprocessing, model training, and evaluation. Tests in the `tests/` directory are triggered on commits and pull requests.
+
+**Linting**
+We use `flake8` and `black` for linting and formatting, ensuring adherence to PEP 8 standards and early identification of potential issues.
+
+**Multi-OS and Multi-Python Version Testing**
+Our workflow tests compatibility across operating systems (Linux, macOS, Windows) and Python versions (3.8, 3.9, 3.10) to ensure portability.
+
+**Caching**
+To reduce runtime, we cache Python dependencies, saving the `pip` environment and minimizing redundant installations.
+
+The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includes steps for dependency installation, testing (`pytest`), linting, and cross-platform compatibility checks.
 
 ## Running code and tracking experiments
 
