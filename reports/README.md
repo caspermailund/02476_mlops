@@ -190,16 +190,18 @@ pip install -e .
 >
 > Answer:
 
-The project was initialized using the cookiecutter template provided in the course and we tried to keep the structure throughout the development. By doing so we create a consistent structure that makes it easier for collaboration.
+The project was initialized using the cookiecutter [template](https://github.com/SkafteNicki/mlops_template) provided in the course, and we aimed to maintain this structure throughout the development process.
 
-We further added the following to the structure to accommodate specific needs for our project:
--	Sripts to ```src```: such as data processing and model training.
--	Dependencies needed for producing the results in ```requirements.txt```.
--	Added ```dvc``` tools.
--	Created notebook to visualize the data.
--	```dvc.yaml``` to ensure reproducibility of the results.
--	CI/CD configuration files to ```.github/workflows```.
--	Docker workflow to automatically building and pushing the docker images.
+Key modifications include, but are not limited to:
+- Created `dataloader.py` in the `src` folder.
+- Added `dvc` tools.
+- Introduced a `log` folder.
+- Included `dvc.yaml` to ensure result reproducibility.
+- Placed CI/CD configuration files under `.github/workflows`.
+- Added `cloudbuild.yaml` to the root directory.
+- Filled out essentials scripts such as `data.py` and `model.py`.
+- Added a notebook to demonstrate images and their labels.
+- Listed dependencies required for generating the results in `requirements.txt`.
 
 ### Question 6
 
