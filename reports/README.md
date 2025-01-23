@@ -462,6 +462,8 @@ The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includ
 --- question 19 fill here ---
 Buckets:
 [Buckets](figures/Buckets.png)
+<img src="figures/Buckets.png" alt="Alt text" width="20" title="Optional title">
+
 
 The bucket contains:
 [Buckets](figures/Buckets_pc_parts.png)
