@@ -70,7 +70,7 @@ The directory structure of the project is based on the [mlops_template](https://
 ├── tests/
 │   ├── __init__.py
 │   ├── test_api.py
-│   ├── test_data.py
+│   ├── test_dataloader.py
 │   ├── test_model.py
 │   └── test_training.py
 ├── .coveragerc
