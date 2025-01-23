@@ -1,4 +1,4 @@
-name: Docker Build and Validate
+name: Docker Build and Validate (with caching)
 
 on:
   push:
@@ -10,17 +10,41 @@ on:
 
 jobs:
   docker-build:
-    name: Build and Validate Docker Images
+    name: Build Docker Images with Caching
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout the code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Build API Docker image
-      - name: Build API Docker Image
-        run: docker build -f dockerfiles/api.dockerfile -t api-image .
+      # Step 2: Set up Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-      # Build Train Docker image
+      # Step 3: Cache Docker layers
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-docker-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-docker-
+
+      # Step 4: Build and push the API Docker image
+      - name: Build API Docker Image
+        run: |
+          docker buildx build \
+            --cache-from=type=local,src=/tmp/.buildx-cache \
+            --cache-to=type=local,dest=/tmp/.buildx-cache,mode=max \
+            -f dockerfiles/api.dockerfile \
+            -t api-image .
+
+      # Step 5: Build and push the Train Docker image
       - name: Build Train Docker Image
-        run: docker build -f dockerfiles/train.dockerfile -t train-image .
+        run: |
+          docker buildx build \
+            --cache-from=type=local,src=/tmp/.buildx-cache \
+            --cache-to=type=local,dest=/tmp/.buildx-cache,mode=max \
+            -f dockerfiles/train.dockerfile \
+            -t train-image .
