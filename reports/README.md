@@ -463,7 +463,7 @@ Buckets:
 [Buckets](figures/Buckets.png)
 <img src="figures/Buckets.png" alt="Alt text" width="20" title="Optional title">
 
-![my_image](figures/<Buckets>.<extension>)
+![my_image](reports/figures/<Buckets>.<extension>)
 
 
 The bucket contains:
