@@ -11,4 +11,4 @@ def test_training():
     with hydra.initialize(config_path="../configs"):
         cfg = hydra.compose(config_name="config_unit_test.yaml")
         # Pass the configuration to your training function
-        result = main(cfg)
+        main(cfg)
