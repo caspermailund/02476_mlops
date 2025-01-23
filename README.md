@@ -27,7 +27,7 @@ Each class contains between 142 and 298 images. All images has a resolution of 2
 ## Albumentations (third-party package)
 The third-party package used in this project is [Albumentations](https://github.com/albumentations-team/albumentations), which is an image augmentation library written in Python. Albumentation has +70 augmentations that can be applied to the training data, involving transformations such as JPEG compression, blurring, grayscaling, channel shuffling, RGB switching, and more. The documentation can be found [here](https://albumentations.ai/docs/).
 
-## Models
+## Model
 The network is a CNN for image classification with three convolutional layers, each followed by batch normalization and ReLU activation. The filters increase from 32 in the first layer to 64 in the second and 128 in the third. Max pooling is applied after each convolution to reduce spatial dimensions. The output is flattened and passed through two fully connected layers, with 512 units in the first and 14 units in the second for classification. Dropout is used for regularization.
 
 ## Project structure
