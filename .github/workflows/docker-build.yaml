@@ -1,0 +1,26 @@
+name: Docker Build and Validate
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  docker-build:
+    name: Build and Validate Docker Images
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Build API Docker image
+      - name: Build API Docker Image
+        run: docker build -f dockerfiles/api.dockerfile -t api-image .
+
+      # Build Train Docker image
+      - name: Build Train Docker Image
+        run: docker build -f dockerfiles/train.dockerfile -t train-image .
