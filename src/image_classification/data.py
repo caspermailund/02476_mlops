@@ -6,13 +6,14 @@ The script allows you to adjust the train/test split via the command-line interf
 Use the --test-size option to modify the ratio (e.g., "python data.py --test-size 0.3" for a 70/30 split).
 """
 
-import subprocess
-import os
-import zipfile
 import logging
-from sklearn.model_selection import train_test_split
+import os
 import shutil
+import subprocess
+import zipfile
+
 import typer
+from sklearn.model_selection import train_test_split
 
 # Configure logging
 logging.basicConfig(
@@ -22,7 +23,9 @@ logging.basicConfig(
 )
 
 # Define paths
-download_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/raw")
+download_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "../../data/raw"
+)
 train_dir = os.path.join(download_path, "pc_parts_train")
 test_dir = os.path.join(download_path, "pc_parts_test")
 pc_parts_dir = os.path.join(download_path, "pc_parts")
@@ -39,7 +42,14 @@ def split_data(test_size: float = 0.2, random_state: int = 42):
     # Download dataset
     typer.echo("Downloading dataset...")
     subprocess.run(
-        ["kaggle", "datasets", "download", "asaniczka/pc-parts-images-dataset-classification", "-p", download_path]
+        [
+            "kaggle",
+            "datasets",
+            "download",
+            "asaniczka/pc-parts-images-dataset-classification",
+            "-p",
+            download_path,
+        ]
     )
 
     # Extract dataset
@@ -63,7 +73,9 @@ def split_data(test_size: float = 0.2, random_state: int = 42):
             image_files = [f for f in os.listdir(category_path) if f.endswith(".jpg")]
 
             # Split the images into train and test based on test_size
-            train_files, test_files = train_test_split(image_files, test_size=test_size, random_state=random_state)
+            train_files, test_files = train_test_split(
+                image_files, test_size=test_size, random_state=random_state
+            )
 
             # Create category subdirectories in train and test directories
             train_category_dir = os.path.join(train_dir, category)
@@ -74,10 +86,16 @@ def split_data(test_size: float = 0.2, random_state: int = 42):
 
             # Move the files to the respective directories
             for file in train_files:
-                shutil.copy(os.path.join(category_path, file), os.path.join(train_category_dir, file))
+                shutil.copy(
+                    os.path.join(category_path, file),
+                    os.path.join(train_category_dir, file),
+                )
 
             for file in test_files:
-                shutil.copy(os.path.join(category_path, file), os.path.join(test_category_dir, file))
+                shutil.copy(
+                    os.path.join(category_path, file),
+                    os.path.join(test_category_dir, file),
+                )
 
             # Update counters
             total_train_files += len(train_files)

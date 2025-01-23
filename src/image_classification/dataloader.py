@@ -3,12 +3,12 @@ This script creates a custom dataset with Albumentations for image augmentations
 It is used to load both the training data and the testing data.
 """
 
-import torch
+import albumentations as A
 import numpy as np
-from torchvision import datasets
+import torch
 from albumentations.pytorch import ToTensorV2
 from PIL import Image
-import albumentations as A
+from torchvision import datasets
 
 # Define Albumentations transformations for training
 transform_train = A.Compose(
@@ -16,7 +16,9 @@ transform_train = A.Compose(
         A.HorizontalFlip(p=0.5),
         A.RandomBrightnessContrast(p=0.2),
         A.Rotate(limit=40, p=0.5),
-        A.HueSaturationValue(hue_shift_limit=10, sat_shift_limit=10, val_shift_limit=10, p=0.3),
+        A.HueSaturationValue(
+            hue_shift_limit=10, sat_shift_limit=10, val_shift_limit=10, p=0.3
+        ),
         A.MotionBlur(blur_limit=5, p=0.3),
         A.RandomShadow(p=0.3),
         A.GaussianBlur(blur_limit=(3, 5), p=0.3),

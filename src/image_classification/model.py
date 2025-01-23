@@ -20,7 +20,9 @@ class SimpleCNN(nn.Module):
         self.pool = nn.MaxPool2d(2, 2)
 
         # Fully connected layer, input size is adjusted based on 256x256 image input
-        self.fc1 = nn.Linear(128 * 32 * 32, 512)  # Output size after pooling is 128x32x32
+        self.fc1 = nn.Linear(
+            128 * 32 * 32, 512
+        )  # Output size after pooling is 128x32x32
         self.fc2 = nn.Linear(512, 14)  # Output layer with 14 units for classification
 
         # Dropout for regularization

@@ -6,16 +6,17 @@ Loguru is used for logging the model initialization, hyperparameters, and the av
 Weights and Biases (W&B) also logs hyperparameters and the training progress. Furthermore, W&B saves the model as an artifact.
 """
 
+import os
+
+import hydra
 import torch
 import torch.optim as optim
-from model import SimpleCNN
-from dataloader import get_train_loader
-from tqdm import tqdm
-import hydra
-from omegaconf import DictConfig
-import os
-from loguru import logger
 import wandb
+from dataloader import get_train_loader
+from loguru import logger
+from model import SimpleCNN
+from omegaconf import DictConfig
+from tqdm import tqdm
 
 
 # Reading the hyperparameters and paths from the configuration file
@@ -34,7 +35,11 @@ def main(cfg: DictConfig):
 
     # Configure logging
     log_file_path = os.path.abspath(cfg.logging_train_path)
-    logger.add(log_file_path, level="INFO", format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}")
+    logger.add(
+        log_file_path,
+        level="INFO",
+        format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}",
+    )
 
     # Initialize the model
     model = SimpleCNN()
@@ -53,12 +58,16 @@ def main(cfg: DictConfig):
 
     # Load the training data using the DataLoader with the batch size from the config
     train_loader = get_train_loader(image_folder=image_folder)
-    train_loader = torch.utils.data.DataLoader(train_loader, batch_size=cfg.batch_size, shuffle=True)
+    train_loader = torch.utils.data.DataLoader(
+        train_loader, batch_size=cfg.batch_size, shuffle=True
+    )
 
     # Training loop
     for epoch in range(cfg.epochs):
         avg_loss = 0.0  # Initialize running average loss for the epoch
-        with tqdm(train_loader, desc=f"Epoch {epoch+1}/{cfg.epochs}", unit="batch") as pbar:
+        with tqdm(
+            train_loader, desc=f"Epoch {epoch+1}/{cfg.epochs}", unit="batch"
+        ) as pbar:
             for iteration, (images, labels) in enumerate(pbar):
                 optimizer.zero_grad()
 

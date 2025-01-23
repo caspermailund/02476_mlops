@@ -1,4 +1,5 @@
 import torch
+
 from image_classification.model import SimpleCNN
 
 

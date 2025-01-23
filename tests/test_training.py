@@ -1,5 +1,6 @@
 import torch
 import torch.optim as optim
+
 from image_classification.model import SimpleCNN
 
 
