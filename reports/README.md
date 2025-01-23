@@ -143,7 +143,7 @@ s170422, s174152, s194277, s233595, s244492
 >
 > Answer:
 
-Albumentations
+We used Albumentations in our project to perform image augmentations (see dataloader.py). We applied transformations like HorizontalFlip, RandomBrightnessContrast, Rotate, and MotionBlur to introduce variability into the training data. These augmentations helped simulate different image conditions, such as lighting changes, rotations, and blurring, which improved the robustness of our Convolutional Neural Network (CNN) for image classification. By generating a larger and more diverse dataset, Albumentations allowed the CNN to generalize better, preventing overfitting and potentially improving its performance on unseen images.
 
 ## Coding environment
 
@@ -272,7 +272,9 @@ The coverage report is seen in table bellow:
 | `tests/test_training.py`                   | 13             | 0          | 100%             |
 | **TOTAL**                                  | **109**        | **14**     | **87%**          |
 
+It is seen that the total coverage in our testing is 87%.
 
+The percentages are and indicator of how much of the coded lines is actually executed during the tests. However even with high percentages there might still be bugs present in parts of the code that are not completely tested or scenarios that haven’t been tested. The percentages are however a good indicator of how much code is covered in the tests and higher percentages are therefore preferred since it means more of the code has been tested which reduces the likelihood of bugs exciting in the code.
 
 ### Question 9
 
@@ -302,7 +304,9 @@ Our workflow included the use of branches and pull requests to create separate w
 >
 > Answer:
 
---- question 10 fill here ---
+Yes, we used DVC with a GCP bucket to manage data. It enabled version control, ensuring consistent datasets,
+reproducibility, and seamless collaboration. The GCP bucket provided scalable storage, centralized access,
+and the ability to revert to previous data versions, making our workflow more efficient and robust.
 
 ### Question 11
 
@@ -319,7 +323,21 @@ Our workflow included the use of branches and pull requests to create separate w
 >
 > Answer:
 
---- question 11 fill here ---
+Our continuous integration (CI) setup, powered by GitHub Actions, ensures the reliability and maintainability of our codebase. Key features include:
+
+**Unit Testing**
+Automated unit tests validate the functionality of key components like data loading, preprocessing, model training, and evaluation. Tests in the `tests/` directory are triggered on commits and pull requests.
+
+**Linting**
+We use `flake8` and `black` for linting and formatting, ensuring adherence to PEP 8 standards and early identification of potential issues.
+
+**Multi-OS and Multi-Python Version Testing**
+Our workflow tests compatibility across operating systems (Linux, macOS, Windows) and Python versions (3.8, 3.9, 3.10) to ensure portability.
+
+**Caching**
+To reduce runtime, we cache Python dependencies, saving the `pip` environment and minimizing redundant installations.
+
+The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includes steps for dependency installation, testing (`pytest`), linting, and cross-platform compatibility checks.
 
 ## Running code and tracking experiments
 
