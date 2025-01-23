@@ -2,8 +2,9 @@
 This script trains a convolutional neural network (CNN).
 
 The training script uses Hydra to load hyperparameters and paths from a configuration file.
-Loguru is used for logging the model initialization, hyperparameters, and the average loss of each epoch.
-Weights and Biases (W&B) also logs hyperparameters and the training progress. Furthermore, W&B saves the model as an artifact.
+Loguru is for logging the model initialization, hyperparameters, and the average loss of each epoch.
+Weights and Biases (W&B) also logs hyperparameters and the training progress.
+Furthermore, W&B saves the model as an artifact.
 """
 
 import os

@@ -1,5 +1,6 @@
 """
-This script creates a custom dataset with Albumentations for image augmentations and tensor conversion.
+This script creates a custom dataset with Albumentations
+for image augmentations and tensor conversion.
 It is used to load both the training data and the testing data.
 """
 

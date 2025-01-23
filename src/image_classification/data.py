@@ -1,9 +1,12 @@
 """
-This script retrieves the PC Parts dataset, extracts its contents, and organizes the data into training and testing sets.
-By default, the dataset is split into 80% training data and 20% testing data, with files stored in 'train' and 'test' directories.
+This script retrieves the PC Parts dataset, extracts its contents,
+and organizes the data into training and testing sets.
+
+By default, the dataset is split into 80% training data and 20% testing data,
+with files stored in 'train' and 'test' directories.
 
 The script allows you to adjust the train/test split via the command-line interface (CLI).
-Use the --test-size option to modify the ratio (e.g., "python data.py --test-size 0.3" for a 70/30 split).
+Use --test-size option to modify the ratio (e.g, "python data.py --test-size 0.3" for a 70/30 split)
 """
 
 import logging
