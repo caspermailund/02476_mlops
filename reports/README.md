@@ -143,7 +143,7 @@ s170422, s174152, s194277, s233595, s244492
 >
 > Answer:
 
-Albumentations
+We used Albumentations in our project to perform image augmentations (see dataloader.py). We applied transformations like HorizontalFlip, RandomBrightnessContrast, Rotate, and MotionBlur to introduce variability into the training data. These augmentations helped simulate different image conditions, such as lighting changes, rotations, and blurring, which improved the robustness of our Convolutional Neural Network (CNN) for image classification. By generating a larger and more diverse dataset, Albumentations allowed the CNN to generalize better, preventing overfitting and potentially improving its performance on unseen images.
 
 ## Coding environment
 
