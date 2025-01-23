@@ -1,4 +1,5 @@
 import wandb
+
 wandb.login(key="5e435a892a1324586da2f4425116de5d843168f3")
 from image_classification.train import main
 import hydra
