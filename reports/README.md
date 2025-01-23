@@ -606,7 +606,23 @@ GCP cloud build history:
 >
 > Answer:
 
---- question 28 fill here ---
+**Yes, we implemented a frontend for our API.**
+
+We created a simple web interface that allows users to upload an image of a PC hardware component. Users can now:
+1. **Upload an image**: The frontend provides an "Image Preview" feature so users can confirm the uploaded image.
+2. **Interact with the interface locally**: The frontend can be run using the `npm start` command in the terminal, and it is accessible at `http://localhost:3000/`.
+
+However, **the frontend does not yet classify the images.** While the upload and preview functionalities work, we need to integrate the backend classification logic with the frontend. This integration will ensure that uploaded images are sent to the backend for classification and the results are displayed to the user.
+
+The reasons for building this frontend are:
+- **Ease of use**: A web-based interface makes the tool accessible to non-technical users.
+- **Testing and visualization**: It allows us to test the basic upload and preview features while we work on completing the backend integration.
+
+Further work is required to complete the classification pipeline and fully connect the frontend with the backend API.
+
+Frontend Interface:
+![Frontend Interface for PC Hardware Image Classification](figures/image_upload_interface.png)
+
 
 ### Question 29
 
