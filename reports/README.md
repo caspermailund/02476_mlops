@@ -358,7 +358,7 @@ The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includ
 >
 > Answer:
 
-We configured our experiments using a `config.yaml` file, which is loaded into `train.py` using Hydra. The configuration file allows us to easily modify for example `batch_size`, `epochs`, and `learning_rate` without changing the code directly. This setup provides flexibility and reproducibility when running different experiments. However, the extent of experimentation is somewhat limited, as the `config.yaml` file was primarily created for demonstration purposes and therefore does not include many hyperparameters. To run an experiment, simply adjust the values in the config file and execute:
+We configured our experiments using a `config.yaml` file, which is loaded into `train.py` using Hydra. The configuration file allows us to easily modify for example `batch_size`, `epochs`, and `learning_rate` without changing `train.py` directly. This setup provides flexibility when running different experiments. However, the extent of experimentation is somewhat limited, as the `config.yaml` file was primarily created for demonstration purposes and therefore does not include many hyperparameters. To run an experiment, simply adjust the values in the config file and execute:
 
 ```bash
 python train.py
