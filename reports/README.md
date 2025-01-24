@@ -681,6 +681,6 @@ Student s194277: Improved my machine learning workflow by writing unit tests, ca
 
 Student s233595: Create for automatically building docker.
 
-Student s244492 : Create git repository with cookiecutter template, build dockerfiles, implement weights and biases to log training, set up version control.
+Student s244492 : Instantiated a GitHub repository based on the ml_ops template using Cookiecutter. Developed the scripts `data.py`, `dataloader.py`, `model.py`, and `train.py` with the implementation of logging, CLI functionality, and configuration management via `configs.yaml` using Hydra. Integrated model tracking and saving artifacts using W&B. Instantiated GCP project, uploaded data to a Cloud Storage bucket, and trained the model using Compute Engine.
 
 All members contributed to writing the report, updating ```requirements.txt``` as we went along. Further we all helped each other when struggling with tasks. Additionally ChatGPT was used to help understanding errors that was made and to help with understanding.
