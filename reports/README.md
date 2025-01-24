@@ -236,11 +236,14 @@ The third party package "ruff" was used to ensure good formatting and used in th
 >
 > Answer:
 
-In total, seven tests were implemented in three different test files; ```test_dataloader.py```, ```test_model.py``` and ```test_training.py```.
+In total, 9 tests were implemented on 4 key functions of the pipeline; ```test_data.py```, ```test_dataloader.py```, ```test_model.py``` and ```test_training.py```.
 ```test_data.py``` tests that
 -	the data contains the right amount of samples, in this case 14
 -	the shape of the image ```(3, 256, 256)```
 -	the labels are within the range ```[0, 13]```.
+```test_dataloader``` tests that
+-   all components of the dataloader are functioning
+      - initalization, instantiation, getitem, transformation
 ```test_model.py``` tests that
 -	the output images produced is of shape ```[1, 14]```.
 ```test_training.py``` tests that
@@ -263,21 +266,26 @@ In total, seven tests were implemented in three different test files; ```test_da
 
 The coverage report is seen in table bellow:
 
-| **File**                                   | **Statements** | **Missed** | **Coverage (%)** |
-|--------------------------------------------|----------------|------------|------------------|
-| `src/image_classification/__init__.py`     | 0              | 0          | 100%             |
-| `src/image_classification/dataloader.py`   | 27             | 13         | 52%              |
-| `src/image_classification/model.py`        | 24             | 0          | 100%             |
-| `tests/__init__.py`                        | 4              | 0          | 100%             |
-| `tests/test_api.py`                        | 0              | 0          | 100%             |
-| `tests/test_data.py`                       | 34             | 1          | 97%              |
-| `tests/test_model.py`                      | 7              | 0          | 100%             |
-| `tests/test_training.py`                   | 13             | 0          | 100%             |
-| **TOTAL**                                  | **109**        | **14**     | **87%**          |
+======================= 9 passed, 40 warnings in 16.03s ========================
+Name                                     Stmts   Miss  Cover   Missing
+----------------------------------------------------------------------
+src/image_classification/__init__.py         0      0   100%
+src/image_classification/data.py            49      3    94%   33-34, 122
+src/image_classification/dataloader.py      27      0   100%
+src/image_classification/model.py           24      0   100%
+src/image_classification/train.py           50      6    88%   101-108, 118
+tests/__init__.py                            4      0   100%
+tests/test_api.py                            0      0   100%
+tests/test_data.py                          28      0   100%
+tests/test_dataloader.py                    47      0   100%
+tests/test_model.py                          7      0   100%
+tests/test_training.py                      12      0   100%
+----------------------------------------------------------------------
+TOTAL                                      248      9    96%
 
-It is seen that the total coverage in our testing is 87%.
+It is seen that the total coverage in our testing is 96%.
 
-The percentages are and indicator of how much of the coded lines is actually executed during the tests. However even with high percentages there might still be bugs present in parts of the code that are not completely tested or scenarios that haven’t been tested. The percentages are however a good indicator of how much code is covered in the tests and higher percentages are therefore preferred since it means more of the code has been tested which reduces the likelihood of bugs exciting in the code.
+The percentages are and indicator of how much of the coded lines is actually executed during the tests. However even with high percentages there might still be bugs present in parts of the code that are not completely tested or scenarios that haven’t been tested. The percentages are however a good indicator of how much code is covered in the tests and higher percentages are therefore preferred since it means more of the code has been tested which reduces the likelihood of bugs exciting in the code. E.g. line 118 might be the most crucial part of the training and is "untested" but one way to look at it, is that you only have to look hard at the code that is untestes in order to trust the code to be error free, and in that way higher coverage means less time looking for errors in the code.
 
 ### Question 9
 
