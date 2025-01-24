@@ -1,7 +1,12 @@
 import pytest
 import torch
-from src.image_classification.dataloader import CustomDataset, get_train_loader, get_test_loader, transform_train, \
-    transform_test
+from src.image_classification.dataloader import (
+    CustomDataset,
+    get_train_loader,
+    get_test_loader,
+    transform_train,
+    transform_test,
+)
 
 
 @pytest.fixture
