@@ -427,7 +427,7 @@ The ```train.dockerfile```can be found through this link: https://github.com/cas
 >
 > Answer:
 
---- question 16 fill here ---
+When we ran into bugs during our experiment we went very systematic though the error message to figure out what was wrong, and we were mostly able to solve it simply by investigating the error message and logs. Sometimes the error message even suggests how to solve it directly e.g. a forgotten installation (the more simple stuff). We also used pythons debugging in VS code which was very helpful when we experienced errors. This approach worked fine for us and we did not use profiling to debug our code. However, we do suspect that using profiling would maybe have solved tasks faster and looking back it is something we plan to implement in our future workflows in order to optimize debugging of our code.
 
 ## Working in the cloud
 
