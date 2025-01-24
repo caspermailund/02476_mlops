@@ -552,7 +552,7 @@ Yes, we managed to write an API for our model. We implemented an endpoint ```/pr
 >
 > Answer:
 
---- question 24 fill here ---
+We managed to deploy the API locally. We used uvicorn to host the FastAPI application on a local machine which was run on a specified port ``` http://127.0.0.1:8000/```. This allowed user friendly platform for testing and interacting with the API endpoint ```/predict/```. By deploying locally we created an environment where we could debug and test the performance of the model and to see if it behaved consistently. However, even though the API worked more or less as intended we were unable to deploy the API in the cloud due to time constraints. If we had managed to deploy the API in the cloud we would have had a larger accessibility for remote work which is preferred when collaborating in a group.
 
 ### Question 25
 
