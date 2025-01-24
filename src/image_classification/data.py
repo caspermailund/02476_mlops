@@ -25,21 +25,29 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 
-# Define paths
-download_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/raw")
-train_dir = os.path.join(download_path, "pc_parts_train")
-test_dir = os.path.join(download_path, "pc_parts_test")
-pc_parts_dir = os.path.join(download_path, "pc_parts")
-
 # Create the app object for CLI
 app = typer.Typer()
 
+def get_paths():
+    base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/raw")
+    return {
+        "download_path": base_path,
+        "train_dir": os.path.join(base_path, "pc_parts_train"),
+        "test_dir": os.path.join(base_path, "pc_parts_test"),
+        "pc_parts_dir": os.path.join(base_path, "pc_parts"),
+    }
 
 @app.command()
 def split_data(test_size: float = 0.2, random_state: int = 42):
     """
     Splits the dataset into training and testing sets based on the specified test_size ratio.
     """
+    paths = get_paths()
+    download_path = paths["download_path"]
+    train_dir = paths["train_dir"]
+    test_dir = paths["test_dir"]
+    pc_parts_dir = paths["pc_parts_dir"]
+
     # Download dataset
     typer.echo("Downloading dataset...")
     subprocess.run(
