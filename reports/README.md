@@ -192,18 +192,13 @@ pip install -e .
 >
 > Answer:
 
-The project was initialized using the cookiecutter [template](https://github.com/SkafteNicki/mlops_template) provided in the course, and we aimed to maintain this structure throughout the development process.
+The project was initialized using the cookiecutter [template](https://github.com/SkafteNicki/mlops_template) provided in the course, and we aimed to maintain this structure throughout the development process. We filled out key scripts from the template, such as `data.py` and `model.py`, while also extending existing files by adding dependencies to `requirements.txt`. Additionally, new files were incorporated into the existing folder structure, including `pictures_and_labels.ipynb` in the `notebooks` folder and `dataloader.py` in `src/image_classification`. New folders were also created such as the `logs` and `frontend` folders. Several other modifications were made to enhance the project, such as:
 
-Key modifications include, but are not limited to:
-- Created `dataloader.py` in the `src` folder.
-- Added `dvc` tools.
-- Introduced a `log` folder.
-- Included `dvc.yaml` to ensure result reproducibility.
+- Integrating `dvc` tools.
+- Including `dvc.yaml` to ensure result reproducibility.
 - Placed CI/CD configuration files under `.github/workflows`.
-- Added `cloudbuild.yaml` to the root directory.
-- Filled out essentials scripts such as `data.py` and `model.py`.
-- Added a notebook to demonstrate images and their labels.
-- Listed dependencies required for generating the results in `requirements.txt`.
+- Adding `cloudbuild.yaml` to the root directory.
+- Creation of `config` files.
 
 ### Question 6
 
@@ -218,7 +213,7 @@ Key modifications include, but are not limited to:
 >
 > Answer:
 
-We aimed to follow good coding practices, keeping in mind Jeff Atwood’s quote: “Code tells you how; Comments tell you why,” which was highlighted in module M7. To support this, we added clear documentation at the beginning of key scripts, such as data.py and train.py, using triple-quoted docstrings (""") to describe the script’s purpose and functionality. Proper documentation and typing are crucial in larger projects as they enhance collaboration, reduce onboarding time for new developers, and minimize errors by making the code easier to understand and maintain.
+We aimed to follow good coding practices, keeping in mind Jeff Atwood’s quote: *“Code tells you how; Comments tell you why.”* which was highlighted in module M7. To support this, we added clear documentation at the beginning of key scripts, such as data.py and train.py, using triple-quoted docstrings (""") to describe the script’s purpose and functionality. Proper documentation and typing are crucial in larger projects as they enhance collaboration, reduce onboarding time for new developers, and minimize errors by making the code easier to understand and maintain.
 The third party package "ruff" was used to ensure good formatting and used in the CI workflow to ensure that good formatting was maintained throughout the project.
 
 ## Version control
@@ -338,16 +333,16 @@ and the ability to revert to previous data versions, making our workflow more ef
 
 Our continuous integration (CI) setup, powered by GitHub Actions, ensures the reliability and maintainability of our codebase. Key features include:
 
-**Unit Testing**
+- **Unit Testing**
 Automated unit tests validate the functionality of key components like data loading, preprocessing, model training, and evaluation. Tests in the `tests/` directory are triggered on commits and pull requests.
 
-**Linting**
+- **Linting**
 We use `flake8` and `black` for linting and formatting, ensuring adherence to PEP 8 standards and early identification of potential issues.
 
-**Multi-OS and Multi-Python Version Testing**
+- **Multi-OS and Multi-Python Version Testing**
 Our workflow tests compatibility across operating systems (Linux, macOS, Windows) and Python versions (3.8, 3.9, 3.10) to ensure portability.
 
-**Caching**
+- **Caching**
 To reduce runtime, we cache Python dependencies, saving the `pip` environment and minimizing redundant installations.
 
 The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includes steps for dependency installation, testing (`pytest`), linting, and cross-platform compatibility checks.
