@@ -658,7 +658,13 @@ Frontend Interface:
 >
 > Answer:
 
---- question 30 fill here ---
+One of the main challenges in the project was keeping track of all the requirements. We realized a few things had been forgotten along the way, so we had to go back and add them in. This made it a bit harder to stay organized, especially as some of the requirements were complex or had dependencies we hadn’t anticipated.
+
+Another struggle was integrating WandB for tracking without accidentally triggering new runs. We didn’t want to clutter the code with too many checks, so finding a clean solution took time. We also faced issues with the M22 model, as it was returning the same prediction for all images. While it was functional, the model’s predictions weren’t reliable.
+
+On top of that, a lot of what we were doing was new to us, so there was a learning curve throughout. This included new concepts in model integration and debugging, which slowed progress a bit, but ultimately helped us grow.
+
+To overcome these, we streamlined the WandB integration, fixed the prediction issues by adjusting the inference process, and revisited the requirements to ensure everything was covered. Despite the setbacks, we were able to make steady progress and learn a lot along the way.
 
 ### Question 31
 
