@@ -384,7 +384,7 @@ python data.py --test-size 0.3
 >
 > Answer:
 
-When running `data.py`, we log the applied train/test split. In `train.py`, we log the model initialization, hyperparameters, and the average loss of each epoch. For demonstration purposes, we used two different logging modules in the two scripts: Python's built-in logging module and loguru's logging module. The log files are saved as `.txt` files in our `log` folder to ensure traceability.  Lastly, we save the trained model as an artifact in Weights & Biases, which would potentially allows us to track and compare different experiment runs over time.
+When running `data.py`, we log the used train/test split. In `train.py`, we log the model initialization, hyperparameters, and the average loss of each epoch. For demonstration purposes, we used two different logging modules in the two scripts: Python's built-in logging module and loguru's logging module. The log files are saved as `.txt` files in our `log` folder to ensure traceability.  Lastly, we save the trained model as an artifact in Weights & Biases, which would potentially allows us to track and compare different experiment runs over time.
 
 ### Question 14
 
