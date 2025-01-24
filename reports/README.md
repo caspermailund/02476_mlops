@@ -301,9 +301,7 @@ Our workflow included the use of branches and pull requests to create separate w
 >
 > Answer:
 
-Yes, we used DVC with a GCP bucket to manage data. It enabled version control, ensuring consistent datasets,
-reproducibility, and seamless collaboration. The GCP bucket provided scalable storage, centralized access,
-and the ability to revert to previous data versions, making our workflow more efficient and robust.
+Yes, we used DVC with a GCP bucket to manage our data. DVC provided version control, allowing us to track and manage different versions of the datasets, ensuring consistency and reproducibility across the project. This setup made it easy to collaborate, as team members could access the same data versions without conflicts. The GCP bucket provided scalable and centralized storage, making it easier to handle large datasets and share them across the team. It also allowed us to easily revert to previous data versions, adding an extra layer of flexibility in case we needed to roll back or compare earlier datasets. Overall, this combination made our workflow more efficient, streamlined collaboration, and ensured that our data management process was both robust and scalable throughout the project.
 
 ### Question 11
 
