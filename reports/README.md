@@ -536,7 +536,7 @@ Yes, we managed to train our model in the cloud using the Engine. We started by 
 >
 > Answer:
 
---- question 23 fill here ---
+Yes, we managed to write an API for our model. We implemented an endpoint ```/predict/``` that allows users to upload their own image, which the model then classifies as a specific pc part. The endpoint also returns both the predicted class and the probabilities of each class. This was done by using FastAPI which is a python framework that is known for its high performance for building an API. We used a model that was trained locally and loaded it into an evaluation mode in order to produce consistent predictions. Even though the API worked the model itself struggled with producing good results and ended up predicting all images as the same class. 
 
 ### Question 24
 
