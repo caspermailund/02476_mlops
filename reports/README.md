@@ -577,7 +577,8 @@ We managed to deploy the API locally. We used uvicorn to host the FastAPI applic
 >
 > Answer:
 
---- question 25 fill here ---
+We did not manage to perform unit testing or load testing on our API. However, if we had managed to do so we would start by ensuring that the API does in fact work as intended and handles request correctly. For testing the functionality we would need to create a test script that creates a client that can send requests to the API. In the test script we would need to include ```assert``` to verify the expected results. To test the API we would then have to run ```pytest test/script/location/test_script.py```. 
+For load test we would use the Locust framework. We would have to create a ``` locustfile.py``` file and then run the command ``` locust -f tests/script/location/locustfile.py``` and navigate to a host where we can simulate the amount of users for the load test. 
 
 ### Question 26
 
