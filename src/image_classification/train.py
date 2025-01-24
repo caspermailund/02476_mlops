@@ -63,7 +63,7 @@ def main(cfg: DictConfig):
     # Training loop
     for epoch in range(cfg.epochs):
         avg_loss = 0.0  # Initialize running average loss for the epoch
-        with tqdm(train_loader, desc=f"Epoch {epoch+1}/{cfg.epochs}", unit="batch") as pbar:
+        with tqdm(train_loader, desc=f"Epoch {epoch + 1}/{cfg.epochs}", unit="batch") as pbar:
             for iteration, (images, labels) in enumerate(pbar):
                 optimizer.zero_grad()
 
@@ -87,7 +87,7 @@ def main(cfg: DictConfig):
                 pbar.set_postfix(loss=avg_loss)
 
         # After each epoch, log the average loss for that epoch
-        logger.info(f"Epoch {epoch+1}/{cfg.epochs}, Average Loss: {avg_loss}")
+        logger.info(f"Epoch {epoch + 1}/{cfg.epochs}, Average Loss: {avg_loss}")
 
     # Save the trained model as an artifact
     try:

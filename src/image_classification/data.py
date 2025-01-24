@@ -28,6 +28,7 @@ logging.basicConfig(
 # Create the app object for CLI
 app = typer.Typer()
 
+
 def get_paths():
     base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/raw")
     return {
@@ -36,6 +37,7 @@ def get_paths():
         "test_dir": os.path.join(base_path, "pc_parts_test"),
         "pc_parts_dir": os.path.join(base_path, "pc_parts"),
     }
+
 
 @app.command()
 def split_data(test_size: float = 0.2, random_state: int = 42):
