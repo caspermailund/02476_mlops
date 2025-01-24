@@ -687,15 +687,11 @@ Frontend Interface:
 > *We have used ChatGPT to help debug our code. Additionally, we used GitHub Copilot to help write some of our code.*
 > Answer:
 
-Student s170422 ...
+Student s170422: Create frontend for our API.
+Student s174152: create pre-commits to version control, linking data with version coltrol, Fast API and version control. 
+Student s194277: Write unite tests related to the code and model training, calculate code coverage, create github actions (caching and linting).
+Student s233595: Create for automatically building docker. 
+Student s244492 : Create git repository with cookiecutter template, build dockerfiles, implement weights and biases to log training, set up version control.
 
-Student s174152 ...
+All members contributed to writing the report, updating ```requirements.txt``` as we went along. Further we all helped each other when struggling with tasks. Additionally ChatGPT was used to help understanding errors that was made and to help with understanding. 
 
-Student s194277 ...
-
-Student s233595 ...
-
-Student s244492 ...
-
-All members contributed to ...
-Addititonally ChatGPT was used to help understanding errors and commands never used before.
