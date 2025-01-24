@@ -84,7 +84,7 @@ will check the repositories and the code to verify your answers.
 * [x] Create a data storage in GCP Bucket for your data and link this with your data version control setup (M21)
 * [x] Create a trigger workflow for automatically building your docker images (M21)
 * [x] Get your model training in GCP using either the Engine or Vertex AI (M21)
-* [ ] Create a FastAPI application that can do inference using your model (M22)
+* [x] Create a FastAPI application that can do inference using your model (M22)
 * [ ] Deploy your model in GCP using either Functions or Run as the backend (M23)
 * [ ] Write API tests for your application and setup continues integration for these (M24)
 * [ ] Load test your application (M24)
@@ -216,7 +216,8 @@ Key modifications include, but are not limited to:
 >
 > Answer:
 
---- question 6 fill here ---
+We aimed to follow good coding practices, keeping in mind Jeff Atwood’s quote: “Code tells you how; Comments tell you why,” which was highlighted in module M7. To support this, we added clear documentation at the beginning of key scripts, such as data.py and train.py, using triple-quoted docstrings (""") to describe the script’s purpose and functionality. Proper documentation and typing are crucial in larger projects as they enhance collaboration, reduce onboarding time for new developers, and minimize errors by making the code easier to understand and maintain.
+The third party package "ruff" was used to ensure good formatting and used in the CI workflow to ensure that good formatting was maintained throughout the project.
 
 ## Version control
 
@@ -358,7 +359,17 @@ The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includ
 >
 > Answer:
 
---- question 12 fill here ---
+We configured our experiments using a `config.yaml` file, which is loaded into `train.py` using Hydra. The configuration file allows us to easily modify for example `batch_size`, `epochs`, and `learning_rate` without changing `train.py` directly. This setup provides flexibility when running different experiments. However, the extent of experimentation is somewhat limited, as the `config.yaml` file was primarily created for demonstration purposes and therefore does not include many hyperparameters... To run an experiment, simply adjust the values in the config file and execute:
+
+```bash
+python train.py
+```
+
+In addition to the config file, we implemented a command-line interface (CLI) in `data.py`. The CLI allows us to easily specify the train/test split when running experiments by using the --test-size option. For example, to set a 70/30 train/test split, run:
+
+```bash
+python data.py --test-size 0.3
+```
 
 ### Question 13
 
@@ -373,7 +384,7 @@ The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includ
 >
 > Answer:
 
---- question 13 fill here ---
+When running `data.py`, we log the used train/test split. In `train.py`, we log the model initialization, hyperparameters, and the average loss of each epoch. For demonstration purposes, we used two different logging modules in the two scripts: Python's built-in logging module and loguru's logging module. The log files are saved as `.txt` files in our `log` folder to ensure traceability.  Lastly, we save the trained model as an artifact in Weights & Biases, which would potentially allows us to track and compare different experiment runs over time.
 
 ### Question 14
 
@@ -508,7 +519,7 @@ GCP cloud build history:
 >
 > Answer:
 
---- question 22 fill here ---
+Yes, we managed to train our model in the cloud using the Engine. We started by creating a virtual machine instance and connected our local computer. After installing the necessary dependencies on the virtual machine, we proceeded with training the model via the Engine. We chose the Engine because of its simplicity, which made it easy to set up and manage the training process.
 
 ## Deployment
 
@@ -525,7 +536,7 @@ GCP cloud build history:
 >
 > Answer:
 
---- question 23 fill here ---
+Yes, we managed to write an API for our model. We implemented an endpoint ```/predict/``` that allows users to upload their own image, which the model then classifies as a specific pc part. The endpoint also returns both the predicted class and the probabilities of each class. This was done by using FastAPI which is a python framework that is known for its high performance for building an API. We used a model that was trained locally and loaded it into an evaluation mode in order to produce consistent predictions. Even though the API worked the model itself struggled with producing good results and ended up predicting all images as the same class.
 
 ### Question 24
 
