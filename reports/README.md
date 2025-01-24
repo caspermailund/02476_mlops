@@ -216,7 +216,7 @@ Key modifications include, but are not limited to:
 >
 > Answer:
 
---- question 6 fill here ---
+We aimed to follow good coding practices, keeping in mind Jeff Atwood’s quote: “Code tells you how; Comments tell you why,” which was highlighted in module M7. To support this, we added clear documentation at the beginning of key scripts, such as data.py and train.py, using triple-quoted docstrings (""") to describe the script’s purpose and functionality. Proper documentation and typing are crucial in larger projects as they enhance collaboration, reduce onboarding time for new developers, and minimize errors by making the code easier to understand and maintain.
 
 ## Version control
 
