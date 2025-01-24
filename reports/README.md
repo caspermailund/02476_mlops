@@ -359,13 +359,13 @@ The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includ
 >
 > Answer:
 
-We configured our experiments using a `config.yaml` file, which is loaded into `train.py` using Hydra. The configuration file allows us to easily modify for example `batch_size`, `epochs`, and `learning_rate` without changing `train.py` directly. This setup provides flexibility when running different experiments. However, the extent of experimentation is somewhat limited, as the `config.yaml` file was primarily created for demonstration purposes and therefore does not include many hyperparameters. To run an experiment, simply adjust the values in the config file and execute:
+We configured our experiments using a `config.yaml` file, which is loaded into `train.py` using Hydra. The configuration file allows us to easily modify for example `batch_size`, `epochs`, and `learning_rate` without changing `train.py` directly. This setup provides flexibility when running different experiments. However, the extent of experimentation is somewhat limited, as the `config.yaml` file was primarily created for demonstration purposes and therefore does not include many hyperparameters... To run an experiment, simply adjust the values in the config file and execute:
 
 ```bash
 python train.py
 ```
 
-In addition to the config file, we implemented a command-line interface (CLI) in `data.py`. The CLI allows us to easily specify the test/train split when running experiments by using the --test-size option. For example, to set a 70/30 train-test split, run:
+In addition to the config file, we implemented a command-line interface (CLI) in `data.py`. The CLI allows us to easily specify the train/test split when running experiments by using the --test-size option. For example, to set a 70/30 train/test split, run:
 
 ```bash
 python data.py --test-size 0.3
