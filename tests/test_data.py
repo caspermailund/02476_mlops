@@ -2,7 +2,7 @@ import os
 import tempfile
 import pytest
 from unittest.mock import patch, MagicMock
-from image_classification.da´ta import split_data, get_paths
+from image_classification.data import split_data, get_paths
 
 
 @patch("subprocess.run")
