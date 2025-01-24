@@ -454,7 +454,7 @@ We used the following four services: Cloud Build Triggers, Compute Engine, Artif
 >
 > Answer:
 
-We used the Compute Engine to run our project's workloads and support our CI/CD pipeline. Specifically, we used e2-medium virtual machines, which offer a balance of performance and cost for general-purpose tasks. These VMs have x86/64 architecture and are suitable for lightweight applications like building and deploying our code. We did not use GPUs or any custom configurations for these instances, as the default setup met our needs.
+We used the Compute Engine to run our project's workloads and support our CI/CD pipeline. Specifically, we utilized e2-medium virtual machines, which provide a balanced combination of performance and cost, making them ideal for general-purpose workloads. These VMs are built on an x86/64 architecture, making them well-suited for lightweight applications like building and deploying code. Each instance includes two virtual CPUs and 4 GB of memory, which offered sufficient resources to meet our requirements. We did not require GPUs or other advanced hardware, as our workloads were relatively straightforward. The default configuration proved reliable, efficient, and cost-effective, meeting all of our project's demands.
 
 ### Question 19
 
