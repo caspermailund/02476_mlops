@@ -405,8 +405,8 @@ Model artifact:
 >
 > Answer:
 
-Docker is a very important tool since it allows for containerized environments that creates a consistent workflow while at the same time ensuring reproducibility. In our project we used docker files for some specific application e.g. for running API and training. The ```train.dockerfile``` is responsible for containerizing the model training pipeline. It makes sure that the environment is set up correctly, installs dependencies and then it execute the training script ```train.py```. 
-In order to run the dockerfile you would follow these steps: 
+Docker is a very important tool since it allows for containerized environments that creates a consistent workflow while at the same time ensuring reproducibility. In our project we used docker files for some specific application e.g. for running API and training. The ```train.dockerfile``` is responsible for containerizing the model training pipeline. It makes sure that the environment is set up correctly, installs dependencies and then it execute the training script ```train.py```.
+In order to run the dockerfile you would follow these steps:
 ```docker build -t image-classification-train -f train.dockerfile .
 docker run image-classification-train```
 
