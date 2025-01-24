@@ -33,43 +33,55 @@ The network is a CNN for image classification with three convolutional layers, e
 ## Project structure
 The directory structure of the project is based on the [mlops_template](https://github.com/SkafteNicki/mlops_template) with slight modifications:
 ```txt
-├── .dvc/
+├── .dvc
 │   ├── .gitignore
 │   └── config
-├── .github/
+├── .github
 │   ├── dependabot.yaml
-│   └── workflows/
-├── configs/
+│   └── workflows
+├── app
+│   └── main.py
+├── configs
 │   ├── .gitkeep
-│   └── config.yaml
-├── data/
-│   ├── processed/
-│   └── raw/
-├── dockerfiles/
+│   ├── config.yaml
+│   └── config_unit_test.yaml
+├── data
+│   ├── mock
+│   ├── processed
+│   └── raw
+├── dockerfiles
 │   ├── api.dockerfile
 │   └── train.dockerfile
-├── docs/
+├── docs
 │   ├── README.md
 │   ├── mkdocs.yaml
-│   └── source/
-├── logs/
+│   └── source
+├── frontend
+│   ├── .gitignore
+│   ├── README.md
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   └── src
+├── logs
 │   ├── train_test_split_log.txt
 │   └── training_log.txt
-├── models/
+├── models
 │   └── .gitkeep
-├── notebooks/
+├── notebooks
 │   ├── .gitkeep
 │   └── pictures_and_labels.ipynb
-├── reports/
+├── reports
 │   ├── .gitkeep
 │   ├── README.md
-│   ├── figures/
+│   ├── figures
 │   └── report.py
-├── src/
-│   └── image_classification/
-├── tests/
+├── src
+│   └── image_classification
+├── tests
 │   ├── __init__.py
 │   ├── test_api.py
+│   ├── test_data.py
 │   ├── test_dataloader.py
 │   ├── test_model.py
 │   └── test_training.py
