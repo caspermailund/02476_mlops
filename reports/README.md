@@ -649,13 +649,13 @@ Frontend Interface:
 >
 > Answer:
 
-One of the main challenges in the project was keeping track of all the requirements. We realized a few things had been forgotten along the way, so we had to go back and add them in. This made it a bit harder to stay organized, especially as some of the requirements were complex or had dependencies we hadn’t anticipated.
+One of the main challenges in the project was keeping track of all the requirements. As the project progressed, we realized that a few things had been overlooked or forgotten along the way, so we had to go back and rework certain aspects to include those missing requirements. This made it more difficult to stay organized, especially since some requirements were complex or had interdependencies that we hadn’t fully anticipated at the start.
 
-Another struggle was integrating WandB for tracking without accidentally triggering new runs. We didn’t want to clutter the code with too many checks, so finding a clean solution took time. We also faced issues with the M22 model, as it was returning the same prediction for all images. While it was functional, the model’s predictions weren’t reliable.
+Another significant struggle was integrating WandB for tracking without accidentally triggering new runs. We didn’t want to clutter the code with too many conditional checks, so finding a clean and efficient solution to manage this process took more time than expected. We also encountered issues with the M22 model, as it was returning the same predictions for all images, which was problematic. Although the model worked, the predictions were unreliable and didn’t meet our expectations.
 
-On top of that, a lot of what we were doing was new to us, so there was a learning curve throughout. This included new concepts in model integration and debugging, which slowed progress a bit, but ultimately helped us grow.
+Additionally, a lot of the tasks and concepts we were working with were new to us, which contributed to a steep learning curve throughout the project. This included unfamiliar areas such as model integration and debugging, which slowed our progress at times but also provided valuable learning opportunities.
 
-To overcome these, we streamlined the WandB integration, fixed the prediction issues by adjusting the inference process, and revisited the requirements to ensure everything was covered. Despite the setbacks, we were able to make steady progress and learn a lot along the way.
+To overcome these challenges, we streamlined the WandB integration, fixed the prediction issues by refining the inference process, and revisited the project requirements to ensure everything was properly covered. Despite the setbacks, we were able to make steady progress and gained a lot of insight along the way.
 
 ### Question 31
 
