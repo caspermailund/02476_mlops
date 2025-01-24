@@ -691,7 +691,7 @@ Student s170422: Create frontend for our API.
 
 Student s174152: create pre-commits to version control, linking data with version coltrol, Fast API and version control.
 
-Student s194277: Write unite tests related to the code and model training, calculate code coverage, create github actions (caching and linting).
+Student s194277: Write unite tests related to the code and model training, calculate code coverage, create github actions and CI workflow.
 
 Student s233595: Create for automatically building docker.
 
