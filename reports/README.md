@@ -464,7 +464,7 @@ Model artifact:
 >
 > Answer:
 
---- question 17 fill here ---
+We used the following four services: Cloud Build Triggers, Compute Engine, Artifact Registry, and Cloud Storage. Cloud Build Triggers are used to automatically start builds when changes are made, like a code commit or pull request. Compute Engine is used to run virtual machines that handle our applications and workloads. Artifact Registry is used to store Docker images and other important files needed for deployment. Finally, Cloud Storage (Buckets) is used to save data like build files and logs in a secure and scalable way.
 
 ### Question 18
 
@@ -479,7 +479,7 @@ Model artifact:
 >
 > Answer:
 
---- question 18 fill here ---
+We used the Compute Engine to run our project's workloads and support our CI/CD pipeline. Specifically, we used e2-medium virtual machines, which offer a balance of performance and cost for general-purpose tasks. These VMs have x86/64 architecture and are suitable for lightweight applications like building and deploying our code. We did not use GPUs or any custom configurations for these instances, as the default setup met our needs. 
 
 ### Question 19
 
