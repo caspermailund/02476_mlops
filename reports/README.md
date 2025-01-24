@@ -192,13 +192,13 @@ pip install -e .
 >
 > Answer:
 
-The project was initialized using the cookiecutter [template](https://github.com/SkafteNicki/mlops_template) provided in the course, and we aimed to maintain this structure throughout the development process. We filled out key scripts from the template, such as `data.py` and `model.py`, while also extending existing files by adding dependencies to `requirements.txt`. Additionally, new files were incorporated into the existing folder structure, including `pictures_and_labels.ipynb` in the `notebooks` folder and `dataloader.py` in `src/image_classification`. New folders were also created such as the `logs` and `frontend` folders. Several other modifications were made to enhance the project, such as:  
+The project was initialized using the cookiecutter [template](https://github.com/SkafteNicki/mlops_template) provided in the course, and we aimed to maintain this structure throughout the development process. We filled out key scripts from the template, such as `data.py` and `model.py`, while also extending existing files by adding dependencies to `requirements.txt`. Additionally, new files were incorporated into the existing folder structure, including `pictures_and_labels.ipynb` in the `notebooks` folder and `dataloader.py` in `src/image_classification`. New folders were also created such as the `logs` and `frontend` folders. Several other modifications were made to enhance the project, such as:
 
 - Added `dvc` tools.
 - Included `dvc.yaml` to ensure result reproducibility.
 - Placed CI/CD configuration files under `.github/workflows`.
 - Added `cloudbuild.yaml` to the root directory.
-  
+
 ### Question 6
 
 > **Did you implement any rules for code quality and format? What about typing and documentation? Additionally,**
