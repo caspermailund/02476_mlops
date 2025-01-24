@@ -1,8 +1,6 @@
-import os
 import pytest
 import torch
 from PIL import Image
-import numpy as np
 from src.image_classification.dataloader import (
     CustomDataset,
     get_train_loader,
