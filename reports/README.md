@@ -264,21 +264,20 @@ In total, 9 tests were implemented on 4 key functions of the pipeline; ```test_d
 The coverage report is seen in table bellow:
 
 ======================= 9 passed, 40 warnings in 16.03s ========================
-Name                                     Stmts   Miss  Cover   Missing
-----------------------------------------------------------------------
-src/image_classification/__init__.py         0      0   100%
-src/image_classification/data.py            49      3    94%   33-34, 122
-src/image_classification/dataloader.py      27      0   100%
-src/image_classification/model.py           24      0   100%
-src/image_classification/train.py           50      6    88%   101-108, 118
-tests/__init__.py                            4      0   100%
-tests/test_api.py                            0      0   100%
-tests/test_data.py                          28      0   100%
-tests/test_dataloader.py                    47      0   100%
-tests/test_model.py                          7      0   100%
-tests/test_training.py                      12      0   100%
-----------------------------------------------------------------------
-TOTAL                                      248      9    96%
+| Name | Stmis | Miss | Cover | Missing |
+| :---: | :---: | :---: | :---: | :---: |
+| src/image_classification/__init_py | 6 | 0 | 160% |  |
+| src/image_classification/data.py | 49 | 3 | 94% | 33-34, 122 |
+| src/image_classification/dataloader.py | 27 | 0 | 100% |  |
+| src/image_classification/model.py | 24 | 0 | 180% |  |
+| src/image_classification/train.py | 56 | 6 | 88% | 101-108, 118 |
+| tests/__init__.py | 4 | 0 | 100% |  |
+| tests/test_api.py | 6 | 0 | 100% |  |
+| tests/test_data.py | 28 | 0 | 100% |  |
+| tests/test_dataloader.py | 47 | 0 | 160% |  |
+| tests/test_model.py | 7 | 0 | 100% |  |
+| tests/test_training.py | 12 | 0 | 100% |  |
+| TOTAL | 248 | 9 | 96% |  |
 
 It is seen that the total coverage in our testing is 96%.
 
