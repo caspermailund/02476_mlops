@@ -391,7 +391,9 @@ When running `data.py`, we log the used train/test split, ensuring that the exac
 >
 > Answer:
 
-We log loss, epoch, and model as an artifact to track the training process. The loss helps us monitor performance and adjust training if needed, while the epoch shows the model's progress across iterations. Saving the model as an artifact allows us to version and retrieve it later for comparison or deployment. However, since the model has only completed one epoch, the data is not highly valuable at this point—it’s more of a demonstration of the process. These logs are key for tracking performance, optimizing hyperparameters, ensuring reproducibility, and enabling collaboration, making the training process transparent and easier to manage.
+We log key elements such as loss, epoch, and the model as an artifact to track the training process. The loss metric allows us to monitor performance and adjust training if needed, while the epoch count reflects the model's progress over iterations. Saving the model as an artifact is particularly valuable because it ensures version control, making it easy to retrieve and compare the model later for deployment, further evaluation, or even for reproducing experiments. This approach helps maintain consistency across different runs, enabling the model to be easily shared, analyzed, and deployed without the need to retrain from scratch. 
+
+However, since the model has only completed one epoch, the logged data is more of a demonstration rather than a valuable performance metric at this stage. Despite this, these logs are essential for optimizing hyperparameters, diagnosing issues, and ensuring reproducibility. By maintaining detailed logs, we make the training process transparent and easier to manage, allowing for better collaboration among team members. Additionally, logging enhances traceability, so experiments can be reproduced and evaluated consistently. In summary, saving the model as an artifact not only aids in versioning and deployment but also ensures that experiments are transparent, reproducible, and easier to manage.
 
 Loss and epochs:
 ![Loss and epochs](figures/w&b_1.png)
