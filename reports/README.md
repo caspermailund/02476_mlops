@@ -587,7 +587,7 @@ For load test we would use the Locust framework. We would have to create a ``` l
 >
 > Answer:
 
-We did not manage to implement monitoring of our deployment model. However, implementing monitoring would mean that we would be able to detect issues with our model such as data drift which could lead to model performance degradation if the problem is not addressed. A monitoring framework ```evidently``` could have been used to track data drift and target drift (target distribution values have changed) and report them. In case changes do occur then we would be aware that the model had to be retrained in order to account for e.g. data drifts. 
+We did not manage to implement monitoring of our deployment model. However, implementing monitoring would mean that we would be able to detect issues with our model such as data drift which could lead to model performance degradation if the problem is not addressed. A monitoring framework ```evidently``` could have been used to track data drift and target drift (target distribution values have changed) and report them. In case changes do occur then we would be aware that the model had to be retrained in order to account for e.g. data drifts.
 Additionally we could have implemented system monitoring to track the amounts of errors the API encountered and number of requests. We could use ```Prometheus``` to collect metrics to get an overview of the system. This could then be monitored on Google Cloud.
 
 ## Overall discussion of project
