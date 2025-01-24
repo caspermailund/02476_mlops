@@ -236,21 +236,21 @@ The third party package "ruff" was used to ensure good formatting and used in th
 In total, 9 tests were implemented on 4 key functions of the pipeline: ```test_data.py```, ```test_dataloader.py```, ```test_model.py``` and ```test_training.py```.
 
 ```test_data.py``` tests that:
--	The data contains the right amount of samples, in this case 14.
--	The shape of the image ```(3, 256, 256)```.
--	The labels are within the range ```[0, 13]```.
+-	Data contains the right amount of samples, in this case 14.
+-	Shape of the image ```(3, 256, 256)```.
+-	Labels are within the range ```[0, 13]```.
 
 ```test_dataloader``` tests that:
 -   All components of the dataloader are functioning;
       - initalization, instantiation, getitem, transformation.
 
 ```test_model.py``` tests that:
--	The output images produced is of shape ```[1, 14]```.
+-	Output images produced is of shape ```[1, 14]```.
 
 ```test_training.py``` tests that:
 -	Output images are produced.
--	The loss function produces non zero values.
--	The optimizer is initialized correctly.
+-	Loss function produces non zero values.
+-	Optimizer is initialized correctly.
 
 ### Question 8
 
