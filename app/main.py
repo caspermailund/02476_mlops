@@ -19,16 +19,20 @@ model.to(device)
 model.eval()
 
 # Define image transformations
-transform = transforms.Compose([
-    transforms.Resize((256, 256)),
-    transforms.ToTensor(),
-    transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
-])
+transform = transforms.Compose(
+    [
+        transforms.Resize((256, 256)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
+    ]
+)
+
 
 @app.get("/")
 def read_root():
     """Health check endpoint."""
     return {"message": "API is running and ready for inference"}
+
 
 @app.post("/predict/")
 async def predict(image: UploadFile = File(...)):
@@ -46,10 +50,7 @@ async def predict(image: UploadFile = File(...)):
             predicted_class = probabilities.argmax().item()
 
         # Send response
-        return JSONResponse(content={
-            "predicted_class": predicted_class,
-            "probabilities": probabilities.tolist()
-        })
+        return JSONResponse(content={"predicted_class": predicted_class, "probabilities": probabilities.tolist()})
 
     except Exception as e:
         return JSONResponse(content={"error": str(e)}, status_code=500)
