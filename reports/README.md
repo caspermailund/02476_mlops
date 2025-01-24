@@ -320,26 +320,19 @@ and the ability to revert to previous data versions, making our workflow more ef
 >
 > Answer:
 
-Our continuous integration (CI) setup, powered by GitHub Actions, ensures the reliability and maintainability of our codebase. Key features include:
+Our continuous integration (CI) setup, powered by GitHub Actions, plays a key role in maintaining the reliability and quality of our codebase. It automates essential processes to ensure that the project remains stable and consistent.
 
-- **Unit Testing**
-Automated unit tests validate the functionality of key components like data loading, preprocessing, model training, and evaluation. Tests in the `tests/` directory are triggered on commits and pull requests.
+A core feature of our CI pipeline is **unit testing**. We have automated tests in place to validate the functionality of crucial components, such as data loading, preprocessing, model training, and evaluation. These tests are stored in the `tests/` directory and are automatically triggered with every commit and pull request, helping to catch issues early in the development process.
 
-- **Linting**
-We use `flake8` and `black` for linting and formatting, ensuring adherence to PEP 8 standards and early identification of potential issues.
+To maintain code quality and prevent errors, we also use **linting** tools like `flake8` and `black`. These tools check for syntax issues, enforce PEP 8 standards, and ensure that our code is properly formatted. This step helps identify potential problems before they impact the codebase.
 
-- **Multi-OS and Multi-Python Version Testing**
-Our workflow tests compatibility across operating systems (Linux, macOS, Windows) and Python versions (3.8, 3.9, 3.10) to ensure portability.
+Our CI pipeline also includes **multi-OS and multi-Python version testing**. We test the compatibility of our code across different operating systems (Linux, macOS, and Windows) and Python versions (3.8, 3.9, and 3.10). This ensures that the project works consistently across various environments, making it more portable and robust.
 
-- **Caching**
-To reduce runtime, we cache Python dependencies, saving the `pip` environment and minimizing redundant installations.
+Additionally, we use **caching** to speed up the CI process. By caching Python dependencies and saving the `pip` environment, we minimize redundant installations and reduce the overall runtime of the pipeline.
 
-The CI pipeline is defined in `tests.yaml` under `.github/workflows/` and includes steps for dependency installation, testing (`pytest`), linting, and cross-platform compatibility checks.
+The CI pipeline is defined in the `tests.yaml` file under `.github/workflows/` and includes steps for installing dependencies, running tests with `pytest`, performing linting, and verifying cross-platform compatibility.
 
-## Running code and tracking experiments
-
-> In the following section we are interested in learning more about the experimental setup for running your code and
-> especially the reproducibility of your experiments.
+For reproducibility, our experiments are tracked within this automated CI framework, ensuring that the results are consistent and repeatable across different environments.
 
 ### Question 12
 
