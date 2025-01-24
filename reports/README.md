@@ -508,7 +508,7 @@ GCP cloud build history:
 >
 > Answer:
 
---- question 22 fill here ---
+Yes, we managed to train our model in the cloud using the Engine. We started by creating a virtual machine instance and connected our local computer. After installing the necessary dependencies on the virtual machine, we proceeded with training the model via the Engine. We chose the Engine because of its simplicity, which made it easy to set up and manage the training process. 
 
 ## Deployment
 
