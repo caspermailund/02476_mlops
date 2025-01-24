@@ -143,7 +143,7 @@ s170422, s174152, s194277, s233595, s244492
 >
 > Answer:
 
-We used Albumentations in our project to perform image augmentations (see dataloader.py). We applied transformations like HorizontalFlip, RandomBrightnessContrast, Rotate, MotionBlur and GaussianBlur to introduce variability into the training data. These augmentations helped simulate different image conditions, such as lighting changes, rotations, and blurring, which improved the robustness of our CNN for image classification. By generating a larger and more diverse dataset, Albumentations allowed the CNN to generalize better, preventing overfitting and potentially improving its performance on unseen images. 
+We used Albumentations in our project to perform image augmentations (see dataloader.py). We applied transformations like HorizontalFlip, RandomBrightnessContrast, Rotate, MotionBlur and GaussianBlur to introduce variability into the training data. These augmentations helped simulate different image conditions, such as lighting changes, rotations, and blurring, which improved the robustness of our CNN for image classification. By generating a larger and more diverse dataset, Albumentations allowed the CNN to generalize better, preventing overfitting and potentially improving its performance on unseen images.
 
 One of the reasons we chose Albumentations is its ease of integration with PyTorch, as well as its optimized performance compared to other augmentation libraries. It provided a simple and efficient way to apply complex transformations with minimal computational overhead.
 
