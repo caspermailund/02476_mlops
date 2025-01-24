@@ -1,8 +1,7 @@
 import os
 import tempfile
-import pytest
 from unittest.mock import patch, MagicMock
-from image_classification.data import split_data, get_paths
+from image_classification.data import split_data
 
 
 @patch("subprocess.run")
@@ -51,4 +50,4 @@ def test_split_data(mock_get_paths, mock_zipfile, mock_subprocess):
         total_test_files = sum(len(files) for _, _, files in os.walk(mock_paths["test_dir"]))
 
         assert total_train_files == 24  # 80% of 30 files
-        assert total_test_files == 6    # 20% of 30 files
+        assert total_test_files == 6  # 20% of 30 files
