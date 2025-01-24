@@ -15,7 +15,7 @@ function App() {
 
       <main>
         <UploadForm setPrediction={setPrediction} setLoading={setLoading} />
-        
+
         {loading && <div className="spinner">Classifying...</div>}
 
         {prediction && !loading && (
